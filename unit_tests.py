@@ -7,15 +7,13 @@ def main():
 	easy = "003020600900305001001806400008102900700000008006708200002609500800203009005010300"
 
 	grid_easy = Grid(easy)
+	print("Given board:")
 	grid_easy.display()
-	u = grid_easy.units["A1"]
-	print(u)
-	assert(len(u) == 3)
-	for i in u:
-		assert(len(i) == 9)
-	print("\n")
-	print(grid_easy.peers["A1"])
-	assert(len(grid_easy.peers["A1"]) == 20)
+	grid_easy.solve()
+	print("Solved board:")
+	grid_easy.display()
+	check = grid_easy.check_valid()
+	print("Is board valid? {}".format(check))
 
 
 
