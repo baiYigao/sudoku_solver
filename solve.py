@@ -4,7 +4,6 @@ input: a string of numbers representing the 9x9 board from top left to
 bottom right (81 number of characters). 0 represents empty square.
 
 output: a visual board that is correctly filled according to Sudoku puzzle rules.
-
 """
 
 def cross_product(A, B):
@@ -17,7 +16,6 @@ class Grid:
 
 	Args:
 		s: input string representing Sudoku board
-
 	"""
 	def __init__(self, s):
 		assert(len(s) == 81)
@@ -54,7 +52,6 @@ class Grid:
 
 		Returns:
 			square label if found; -1 if all squares have filled
-
 		"""
 		for s in self.squares:
 			if self.board[s] == "0":
